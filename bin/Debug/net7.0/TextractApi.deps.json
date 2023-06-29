@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v7.0": {
       "TextractApi/1.0.0": {
         "dependencies": {
+          "AWSSDK.DynamoDBv2": "3.7.104.1",
+          "AWSSDK.S3": "3.7.106.1",
+          "AWSSDK.Textract": "3.7.105.49",
           "Microsoft.AspNetCore.OpenApi": "7.0.8",
           "Microsoft.Data.SqlClient": "5.1.1",
           "Microsoft.EntityFrameworkCore": "7.0.8",
@@ -18,10 +21,52 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.7",
+          "Newtonsoft.Json": "13.0.3",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
           "TextractApi.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.107.8": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.107.8"
+          }
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.7.104.1": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.107.8"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.104.1"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.106.1": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.107.8"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.106.1"
+          }
+        }
+      },
+      "AWSSDK.Textract/3.7.105.49": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.107.8"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Textract.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.105.49"
+          }
         }
       },
       "Azure.Core/1.25.0": {
@@ -1167,7 +1212,7 @@
         "dependencies": {
           "Humanizer": "2.14.1",
           "Microsoft.CodeAnalysis.CSharp.Features": "4.4.0",
-          "Newtonsoft.Json": "13.0.1",
+          "Newtonsoft.Json": "13.0.3",
           "NuGet.ProjectModel": "6.3.1"
         },
         "runtime": {
@@ -1466,7 +1511,7 @@
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "7.0.7",
-          "Newtonsoft.Json": "13.0.1"
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "lib/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
@@ -1518,7 +1563,7 @@
           "Microsoft.Build": "17.3.2",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.4.0",
           "Microsoft.DotNet.Scaffolding.Shared": "7.0.7",
-          "Newtonsoft.Json": "13.0.1"
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "lib/net7.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {
@@ -1621,11 +1666,11 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/13.0.1": {
+      "Newtonsoft.Json/13.0.3": {
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "13.0.0.0",
-            "fileVersion": "13.0.1.25517"
+            "fileVersion": "13.0.3.27908"
           }
         }
       },
@@ -1687,7 +1732,7 @@
       },
       "NuGet.Packaging/6.3.1": {
         "dependencies": {
-          "Newtonsoft.Json": "13.0.1",
+          "Newtonsoft.Json": "13.0.3",
           "NuGet.Configuration": "6.3.1",
           "NuGet.Versioning": "6.3.1",
           "System.Security.Cryptography.Cng": "5.0.0",
@@ -2761,6 +2806,34 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AWSSDK.Core/3.7.107.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6S98e0sYWeSokj99E6fKDxWPXjQVoWhAS4He4yKssCYbKWW+C37x5OhKSx3FkLtNZj0F42KbqeG0qiNVN5z6pQ==",
+      "path": "awssdk.core/3.7.107.8",
+      "hashPath": "awssdk.core.3.7.107.8.nupkg.sha512"
+    },
+    "AWSSDK.DynamoDBv2/3.7.104.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AJcGP5VD+SL8TK3clPqpVebdEVWzpeXpYBM9gmymZGxREMTe5B/iivU9CbqDjWb3TGdV67Nt+l8cedpxBCpzUw==",
+      "path": "awssdk.dynamodbv2/3.7.104.1",
+      "hashPath": "awssdk.dynamodbv2.3.7.104.1.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.106.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1/eJMq6gAGdzqyoyn62yH3ZIW/+XFMmfzPC763gyZB3KqEvXuHoH2XjKI8+v+QL2jCJx4gUuVYAH9WR0MkSN/w==",
+      "path": "awssdk.s3/3.7.106.1",
+      "hashPath": "awssdk.s3.3.7.106.1.nupkg.sha512"
+    },
+    "AWSSDK.Textract/3.7.105.49": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hZ3R25mza1GLsH5nko6ye5iz59LRkw/i+6Vni07TXMurdfn8tJWbMiHjCbooI2aXyUEvF061abdnevOeXRrd4Q==",
+      "path": "awssdk.textract/3.7.105.49",
+      "hashPath": "awssdk.textract.3.7.105.49.nupkg.sha512"
+    },
     "Azure.Core/1.25.0": {
       "type": "package",
       "serviceable": true,
@@ -3594,12 +3667,12 @@
       "path": "netstandard.library/1.6.1",
       "hashPath": "netstandard.library.1.6.1.nupkg.sha512"
     },
-    "Newtonsoft.Json/13.0.1": {
+    "Newtonsoft.Json/13.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
-      "path": "newtonsoft.json/13.0.1",
-      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
     "NuGet.Common/6.3.1": {
       "type": "package",

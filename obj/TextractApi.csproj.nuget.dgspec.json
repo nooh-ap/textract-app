@@ -39,9 +39,17 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AWSSDK.DynamoDBv2": {
+              "target": "Package",
+              "version": "[3.7.104.1, )"
+            },
             "AWSSDK.S3": {
               "target": "Package",
               "version": "[3.7.106.1, )"
+            },
+            "AWSSDK.Textract": {
+              "target": "Package",
+              "version": "[3.7.105.49, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -86,6 +94,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[7.0.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

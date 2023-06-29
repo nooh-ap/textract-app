@@ -281,3 +281,7 @@
 /Users/noohalmahfoodi/projects/TextractApi/TextractApi/bin/Debug/net7.0/runtimes/win-arm64/native/e_sqlite3.dll
 /Users/noohalmahfoodi/projects/TextractApi/TextractApi/bin/Debug/net7.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/noohalmahfoodi/projects/TextractApi/TextractApi/bin/Debug/net7.0/runtimes/win-x86/native/e_sqlite3.dll
+/Users/noohalmahfoodi/projects/TextractApi/TextractApi/bin/Debug/net7.0/AWSSDK.Core.dll
+/Users/noohalmahfoodi/projects/TextractApi/TextractApi/bin/Debug/net7.0/AWSSDK.S3.dll
+/Users/noohalmahfoodi/projects/TextractApi/TextractApi/bin/Debug/net7.0/AWSSDK.Textract.dll
+/Users/noohalmahfoodi/projects/TextractApi/TextractApi/bin/Debug/net7.0/AWSSDK.DynamoDBv2.dll

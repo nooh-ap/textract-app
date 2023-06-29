@@ -9,7 +9,7 @@ using TextractApi.Models;
 
 namespace TextractApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class TextractItemsController : ControllerBase
     {
@@ -22,7 +22,7 @@ namespace TextractApi.Controllers
 
         // GET: api/TextractItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TextractItemDTO>>> GetTextractItems()
+        public async Task<ActionResult<IEnumerable<TextractItemDto>>> GetTextractItems()
         {
             return await _context.TextractItems
                 .Select(x => ItemToDTO(x))
@@ -31,7 +31,7 @@ namespace TextractApi.Controllers
 
         // GET: api/TextractItems/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<TextractItemDTO>> GetTextractItem(Guid id)
+        public async Task<ActionResult<TextractItemDto>> GetTextractItem(Guid id)
         {
             var TextractItem = await _context.TextractItems.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace TextractApi.Controllers
         // PUT: api/TextractItems/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTextractItem(Guid id, TextractItemDTO textractDTO)
+        public async Task<IActionResult> PutTextractItem(Guid id, TextractItemDto textractDTO)
         {
             if (id != textractDTO.Id)
             {
@@ -77,7 +77,7 @@ namespace TextractApi.Controllers
         // POST: api/TextractItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<TextractItemDTO>> PostTextractItem(TextractItemDTO textractDTO)
+        public async Task<ActionResult<TextractItemDto>> PostTextractItem(TextractItemDto textractDTO)
         {
             var textractItem = new TextractItem
             {
@@ -119,8 +119,8 @@ namespace TextractApi.Controllers
             return (_context.TextractItems?.Any(e => e.Id == id)).GetValueOrDefault();
         }
 
-        private static TextractItemDTO ItemToDTO(TextractItem textractItem) =>
-            new TextractItemDTO
+        private static TextractItemDto ItemToDTO(TextractItem textractItem) =>
+            new TextractItemDto
             {
                 Id = textractItem.Id,
                 Item = textractItem.Item,
